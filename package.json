@@ -1,0 +1,36 @@
+{
+  "name": "location",
+  "version": "1.0.0",
+  "description": "location",
+  "license": "OML",
+  "author": {
+    "name": "Edison Mojica"
+  },
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "*"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/Campin10/within3-test.git"
+  },
+  "scripts": {
+    "docker": "docker compose --env-file .env up",
+    "dev": "lerna run dev",
+    "docker:build": "docker compose build",
+    "build": "lerna run build",
+    "lint": "eslint --ext .ts .",
+    "lint:fix": "eslint **/*.ts --quiet --fix",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean --yes",
+    "test": "lerna run test"
+  },
+  "dependencies": {
+    "lerna": "^4.0.0"
+  },
+  "engines": {
+    "npm": "^8.5.0",
+    "node": "16.14.2"
+  }
+}

@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  api:
+    image: "${IMAGE_API}"
+    build: 
+        dockerfile: Dockerfile
+        context: ./server
+    environment:
+      PORT: "${PORT}"
+      WEB_URL: "${WEB_URL}"
+      WEBSITE_HOSTNAME: "${WEBSITE_HOSTNAME}"
+      DATA_BD: "${DATA_BD}"
+      MONGODB_SECRET_USER: "${MONGODB_SECRET_USER}"
+      MONGODB_SECRET_PASS: "${MONGODB_SECRET_PASS}"
+      APPINSIGHTS_INSTRUMENTATIONKEY: "${APPINSIGHTS_INSTRUMENTATIONKEY}"
+      NODE_ENV: "${NODE_ENV}"
+    ports:
+      - 80:80

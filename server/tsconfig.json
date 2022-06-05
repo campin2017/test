@@ -1,0 +1,13 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "types": ["node","jest"],
+    "strict": true,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules"]
+}

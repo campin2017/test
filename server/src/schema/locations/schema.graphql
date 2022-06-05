@@ -1,0 +1,22 @@
+input LocationInput {
+  zip_code: Int!
+  city: String!
+  country: String!
+}
+
+type Location {
+  city: String!
+  country: String!
+}
+
+type Query {
+  getLocationInfo(zip_code: Int!): Location
+}
+
+type Mutation {
+  createLocation(data: LocationCreateInput!): Location!
+}
+
+input LocationCreateInput {
+  locations: [LocationInput!]!
+}
